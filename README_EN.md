@@ -8,6 +8,10 @@
 
 ![Workflow architecture](docs/workflow-architecture.jpg)
 
+> What I am really doing is handing my own judgment and domain knowledge to the AI, wholesale, training it into a version of me that never tires.
+>
+> The quality and integrity problems of AI-assisted research are not about writing a good enough prompt. They are a governance problem: the absence of institutions. The answer lies not at the level of a single conversation (prompting), but in building the researcher's judgment into a machine-readable, executable, and auditable architecture (harnessing).
+
 ## The problem
 
 Generative AI is already inside research work. Used casually — one prompt, one output — it fabricates citations, attaches invented page numbers and claims to real papers, overstates causal language beyond what the research design supports, and degrades over long sessions. The common responses are prohibition or reliance on prompting skill. This project takes a third route, borrowed from public administration: treat the AI as a highly capable but imperfectly reliable agent, and govern it the way organizations govern agents — with **division of labor, delegation rules, audit trails, and version control**. Quality comes from reliable processes, not reliable individuals; that principle holds for AI too.
@@ -36,7 +40,7 @@ The layering answers not "where do files live" but "what do the human and the AI
 
 **Governance base — folder read/write rules** (`starter-kit/`) — six folders map to research stages: `00_專案控制/` (control files), `01_文獻/` (literature), `02_資料與證據/` (data & evidence), `03_寫作/` (manuscripts), `04_審稿與回應/` (reviews & responses), `05_輸出/` (outputs). Folders `00`–`04` are read-only during task execution; `05_輸出/` is the AI's **only** writable area. Every output lands there first and is promoted to the formal folders only by the human. Authority separation is enforced by the file system, not by promises.
 
-## The core selling point: a fabrication-proofing chain
+## The core mechanism: a fabrication-proofing chain
 
 Hallucinations propagate downstream: one fabricated claim absorbed at the analysis stage gets written into the synthesis map, then cited in the manuscript, gaining legitimacy at every step. So anti-fabrication here is not a feature of one skill but **six lines of defense along the whole pipeline**:
 
@@ -71,6 +75,6 @@ Skills 1–6 and all documents are the author's original work, built and iterate
 
 ## Author
 
-Lo-Wei Lee (李洛維), Assistant Professor, Taiwan Police College. He spent twelve years as a civil servant before moving into academia — the source of the governing instinct behind this workflow.
+Lo-Wei Lee (李洛維), Assistant Professor, Taiwan Police College.
 
 **Citation**: Lee, L.-W. (2026). *academic-ai-workflow: An institution-based AI collaboration workflow for academic research* (v1.0.0). https://github.com/LoWeiLee/academic-ai-workflow
