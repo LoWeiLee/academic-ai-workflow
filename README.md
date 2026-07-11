@@ -4,11 +4,15 @@
 
 > 我在做的，是將自己的判斷力與領域知識，整包教給 AI，訓練 AI 成為一個不會累的我。
 >
-> AI 輔助研究的品質與誠信問題，不是「提示詞寫得夠不夠好」的技巧問題，而是制度缺席的治理問題。解決方案不在單次對話的層次(prompt)，而在把研究者的判斷力建構為一整套 AI 可讀、可執行、可稽核的架構(harnessing)。
+> AI 輔助研究的品質與誠信困境，不是技巧問題，而是治理問題。解決方案不在單次對話的層次(prompt)，而在把研究者的判斷力建構為一整套 AI 可讀、可執行、可稽核的架構(harnessing)。
+>
+> 什麼該進執行層自動化、什麼必須留在使用者手上，這個判斷只有每天親手做研究的你做得出來。
 
 > What I am really doing is handing my own judgment and domain knowledge to the AI, wholesale, training it into a version of me that never tires.
 >
-> The quality and integrity problems of AI-assisted research are not about writing a good enough prompt. They are a governance problem: the absence of institutions. The answer lies not at the level of a single conversation (prompting), but in building the researcher's judgment into a machine-readable, executable, and auditable architecture (harnessing).
+> The quality and integrity dilemmas of AI-assisted research are not a problem of technique but of governance. The answer lies not at the level of a single conversation (prompting), but in building the researcher's judgment into a machine-readable, executable, and auditable architecture (harnessing).
+>
+> What belongs in the automated execution layer and what must stay in your hands is a call only someone who does the research by hand, every day, can make.
 
 **An institution-based AI collaboration workflow for academic research.** Seven pipelined skills, four control-file templates, and a governed folder base that turn a large language model into an auditable research assistant.
 

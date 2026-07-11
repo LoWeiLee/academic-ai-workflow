@@ -10,7 +10,9 @@
 
 > What I am really doing is handing my own judgment and domain knowledge to the AI, wholesale, training it into a version of me that never tires.
 >
-> The quality and integrity problems of AI-assisted research are not about writing a good enough prompt. They are a governance problem: the absence of institutions. The answer lies not at the level of a single conversation (prompting), but in building the researcher's judgment into a machine-readable, executable, and auditable architecture (harnessing).
+> The quality and integrity dilemmas of AI-assisted research are not a problem of technique but of governance. The answer lies not at the level of a single conversation (prompting), but in building the researcher's judgment into a machine-readable, executable, and auditable architecture (harnessing).
+>
+> What belongs in the automated execution layer and what must stay in your hands is a call only someone who does the research by hand, every day, can make.
 
 ## The problem
 
