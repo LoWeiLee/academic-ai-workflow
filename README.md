@@ -1,5 +1,9 @@
 # academic-ai-workflow
 
+**一套以制度治理生成式 AI 的學術研究協作工作流。** 七道工序、四份控制檔模板、一個資料夾治理基座，把大型語言模型變成可稽核的研究助理。
+
+**An institution-based AI collaboration workflow for academic research.** Seven pipelined skills, four control-file templates, and a governed folder base that turn a large language model into an auditable research assistant.
+
 ![Workflow architecture / 工作流架構](docs/workflow-architecture.jpg)
 
 > 我在做的，是將自己的判斷力與領域知識，整包教給 AI，訓練 AI 成為一個不會累的我。
@@ -13,9 +17,5 @@
 > The quality and integrity dilemmas of AI-assisted research are not a problem of technique but of governance. The answer lies not at the level of a single conversation (prompting), but in building the researcher's judgment into a machine-readable, executable, and auditable architecture (harnessing).
 >
 > What belongs in the automated execution layer and what must stay in your hands is a call only someone who does the research by hand, every day, can make.
-
-**一套以制度治理生成式 AI 的學術研究協作工作流。** 七道工序、四份控制檔模板、一個資料夾治理基座，把大型語言模型變成可稽核的研究助理。
-
-**An institution-based AI collaboration workflow for academic research.** Seven pipelined skills, four control-file templates, and a governed folder base that turn a large language model into an auditable research assistant.
 
 Read the full README in ／ 完整說明請選擇語言：　**[English](README_EN.md)**　｜　**[繁體中文](README_CHT.md)**
