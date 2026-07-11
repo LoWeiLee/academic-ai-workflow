@@ -2,8 +2,6 @@
 
 > **English** ｜ [繁體中文](README_CHT.md)
 
-**An institution-based AI collaboration workflow for academic research** — a three-layer architecture (a rules layer, a thinking layer, and an execution layer of seven pipelined skills) on a governed folder base, together turning a large language model into an auditable research assistant.
-
 > 本專案主要文件為繁體中文。完整的設計原理與架構說明見[工作流架構白皮書](docs/工作流架構白皮書.md)，安裝與操作見[快速上手指南](docs/快速上手指南.md)。This README is the English overview; the full documentation is in Traditional Chinese.
 
 ![Workflow architecture](docs/workflow-architecture.jpg)
