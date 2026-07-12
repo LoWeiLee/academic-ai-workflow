@@ -1,9 +1,15 @@
 # academic-ai-workflow
 
-> **English** ｜ [繁體中文](README_CHT.md)
+**English** ｜ [繁體中文](README_CHT.md)
 
-> 本專案主要文件為繁體中文。完整的設計原理與架構說明見[工作流架構白皮書](docs/工作流架構白皮書.md)，安裝與操作見[快速上手指南](docs/快速上手指南.md)。
-> This README is the English overview; the full documentation is in Traditional Chinese.
+> What I am really doing is handing my own judgment and domain knowledge to the AI, wholesale, training it into a version of me that never tires.
+>
+> The quality and integrity dilemmas of AI-assisted research are not a problem of technique but of governance. The answer lies not at the level of a single conversation (prompting), but in building the researcher's judgment into a machine-readable, executable, and auditable architecture (harnessing).
+>
+> What belongs in the automated execution layer and what must stay in your hands is a call only someone who does the research by hand, every day, can make.
+
+本專案主要文件為繁體中文。完整的設計原理與架構說明見[工作流架構白皮書](docs/工作流架構白皮書.md)，安裝與操作見[快速上手指南](docs/快速上手指南.md)。
+This README is the English overview; the full documentation is in Traditional Chinese.
 
 ## The problem
 
