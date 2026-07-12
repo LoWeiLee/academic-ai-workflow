@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## v1.0.2（環境路徑澄清，2026-07-12）
+
+僅文件變更，skill 原始碼與打包檔未動（維持 v1.0.1）。
+
+**新增 claude.ai 單支使用路徑**
+- 新增 `docs/在-claude-ai-上使用.md`：七支 skill 在 claude.ai 網頁版的單支獨立使用手冊，含安裝步驟、Project files 準備、開場宣告模板、七支的單支使用卡、手動交接流程、三個真實限制
+- 澄清一項此前未載明的事實：**Skills 在 claude.ai 自 Free 方案起即可用**，`.skill` 打包檔（含 `references/`、`scripts/`）可直接上傳、不需拆解。過往文件將 Cowork／Claude Code 隱含為唯一入口，形成不必要的採用門檻
+- 快速上手指南「事前準備」改寫為兩種用法的分岔（A. 管線用法／B. 單支工具用法），附能力對照表與路徑指引；FAQ 增列「我只有 claude.ai，能用嗎？」
+- README（根／CHT／EN）修正「以 Claude Cowork 平台搭建」的絕對化表述，並補上 claude.ai 路徑的指引
+
+**環境限制的顯性化**
+- 明載 claude.ai 沙盒的網域白名單（PyPI／npm／GitHub／Ubuntu／crates.io ＋ Anthropic API）**不含** `api.openalex.org` 與 `api.semanticscholar.org`，故 literature-search 的自動搜尋在 Free／Pro／Max 上必然被擋，只能走 skill 內建的手動匯出模式；Team／Enterprise 擁有者可自訂網域白名單解除此限制
+- 明載跨對話狀態（`progress-log.md`、chapter-drafting 的段落凍結）在無持久檔案系統時失效，並給出人工替代動作
+- 明載 skill 內文的 `00_專案控制/` 路徑錨點在 claude.ai 上不存在，提供一次性的開場宣告模板繞過；skill 內建的自動降級分支列為下一版待辦
+- 白皮書 §7.1 補「環境的一則說明」，指出 §2.4（唯一寫入區）與 §5（狀態必須落檔）預設持久檔案系統，並指向 claude.ai 路徑
+- `docs/進階_知識庫與Obsidian整合.md`：frontmatter 的消費端由「Cowork 端」改為「工作流端」（不限執行環境）
+
+**下一版待辦（v1.1）**
+- 七支 SKILL.md 補上「無工作區資料夾」的自動降級分支，取代目前的人工開場宣告
+- skill 原始檔與範本中殘留的「Cowork 端」「分析者：Claude（Cowork 模式）」等環境代名詞收斂為環境中立表述
+- `starter-kit/README.md` 補上 claude.ai 使用者的 Project files 替代路徑
+
 ## v1.0.1（紅隊審查修訂，2026-07-12）
 
 **新手上手路徑（阻斷性修正）**

@@ -14,7 +14,7 @@ Zotero 在整套設計裡的角色不只是抓 PDF，它為每篇文獻提供一
 
 逐篇分析工序（literature-analysis）對每篇 PDF 產出兩個檔案。知識檔記載這篇文獻本身說了什麼，與你的任何論文無關，可跨論文複用；應用檔記載它對你當前這篇論文有什麼用，綁定論文編號。這個雙檔分離是知識庫能長期累積的前提：知識沉澱一次寫成，換一篇論文只需補一份新的應用檔。
 
-兩種檔案最前端都帶 YAML frontmatter，讓同一份 `.md` 同時滿足三端：Cowork 端供綜整工序解析、建立文獻清單，Obsidian 端支援 graph view 與 backlink，Zotero 端以 `citation_key` 連回原始條目。
+兩種檔案最前端都帶 YAML frontmatter，讓同一份 `.md` 同時滿足三端：工作流端供綜整工序解析、建立文獻清單（不限執行環境，claude.ai 上的 skill 一樣讀 frontmatter），Obsidian 端支援 graph view 與 backlink，Zotero 端以 `citation_key` 連回原始條目。
 
 ## 三、綜整：跨篇
 

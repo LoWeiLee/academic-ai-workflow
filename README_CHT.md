@@ -2,7 +2,7 @@
 
 [English](README_EN.md) ｜ **繁體中文**
 
-本專案主要文件為繁體中文。完整的設計原理與架構說明見[工作流架構白皮書](docs/工作流架構白皮書.md)，安裝與操作見[快速上手指南](docs/快速上手指南.md)。
+本專案主要文件為繁體中文。完整的設計原理與架構說明見[工作流架構白皮書](docs/工作流架構白皮書.md)，安裝與操作見[快速上手指南](docs/快速上手指南.md)。只有 claude.ai 網頁版（無 Cowork／Claude Code）的使用者見[在 claude.ai 上使用](docs/在-claude-ai-上使用.md)。
 
 > 我在做的，是將自己的判斷力與領域知識，整包教給 AI，訓練 AI 成為一個不會累的我。
 >
@@ -62,6 +62,8 @@ git clone https://github.com/LoWeiLee/academic-ai-workflow.git
 3. 拿一個真實的小題目跑一遍研究架構建立→單篇文獻分析，體會交接節奏，再逐步擴大。
 
 逐步操作說明見 [docs/快速上手指南.md](docs/快速上手指南.md)。
+
+**環境**：完整的管線形態需要一個持久的工作區資料夾，即 Claude 桌面應用的 Cowork 模式或 Claude Code。**七支 skill 在 claude.ai 網頁版也裝得起來**（Skills 自 Free 方案起可用，於 Settings → Capabilities 開啟 Code execution and file creation 即可），只是從一條管線退化為七把獨立的工具：工序間的交接由你手動搬檔，literature-search 的自動搜尋不可用（沙盒網域白名單不含 OpenAlex／Semantic Scholar），chapter-drafting 的跨對話凍結保護失效。skill 1、3、6 幾乎不受影響。單支用法的完整操作手冊見 [docs/在-claude-ai-上使用.md](docs/在-claude-ai-上使用.md)。
 
 ## 誠實的邊界
 
