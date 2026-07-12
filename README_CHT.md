@@ -58,8 +58,8 @@ git clone https://github.com/LoWeiLee/academic-ai-workflow.git
 ```
 
 1. 把 `starter-kit/` 複製為你的研究工作區，填好四份控制檔（模板附逐欄指引與虛構範例）。
-2. 從 `skills/packaged/` 安裝七支 skill（或先只裝 skill 2＋3）。
-3. 拿一個真實的小題目跑一遍搜尋→分析，體會交接節奏，再逐步擴大。
+2. 從 `skills/packaged/` 安裝七支 skill（或先只裝 skill 1＋3）。
+3. 拿一個真實的小題目跑一遍研究架構建立→單篇文獻分析，體會交接節奏，再逐步擴大。
 
 逐步操作說明見 [docs/快速上手指南.md](docs/快速上手指南.md)。
 
