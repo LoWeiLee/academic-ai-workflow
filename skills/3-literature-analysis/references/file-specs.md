@@ -74,7 +74,7 @@ type_of_work: article
 type: literature-knowledge
 topic: ＜主題A＞
 analyzed_date: 2026-06-XX
-analyzed_by_skill_version: literature-analysis-v1.0.0
+analyzed_by_skill_version: literature-analysis-v1.0.1
 pdf_path: "＜主題A＞_Chen2020_TopicFramework.pdf"
 zotero_select: "zotero://select/library/items/@chen2020topic"
 tags:
@@ -125,7 +125,7 @@ type: literature-application
 paper_id: ＜你的論文＞
 knowledge_note: "＜主題A＞_Chen2020_TopicFramework_知識.md"
 applied_date: 2026-06-XX
-analyzed_by_skill_version: literature-analysis-v1.0.0
+analyzed_by_skill_version: literature-analysis-v1.0.1
 tags:
   - paper/＜你的論文＞
   - 文獻/＜主題A＞
@@ -151,7 +151,7 @@ tags:
     "topic": "＜主題A＞",
     "file": "理論基礎/＜主題A＞/＜主題A＞_Chen2020_TopicFramework_知識.md",
     "analyzed_date": "2026-06-XX",
-    "skill_version": "v1.0.0",
+    "skill_version": "v1.0.1",
     "applications": ["＜你的論文＞"]
   }
 }

@@ -24,7 +24,7 @@ import os
 import re
 import sys
 from datetime import date
-SKILL_VERSION = "v1.0.0"  # 與 SKILL.md 版本同步升（禁散落硬編版號）
+SKILL_VERSION = "v1.0.1"  # 與 SKILL.md 版本同步升（禁散落硬編版號）
 
 CORE_FIELDS = ["文獻標識", "核心主張", "理論框架", "研究缺口建構方式", "方法設計"]
 APP_FIELDS = ["對當前研究的直接用途", "警示"]
@@ -161,7 +161,8 @@ def build_knowledge_md(meta, fields, sec0, sec1, sec3, selfcheck, needs_review, 
     fm.append("topic: " + topic)
     fm.append("analyzed_date: " + meta.get("analyzed_date", str(date.today())))
     fm.append("analyzed_by_skill_version: literature-analysis-" + SKILL_VERSION)
-    fm.append('pdf_path: "' + topic + "_" + ay + "_" + kw + '.pdf"')
+    pdf_file = pdf_name or (topic + "_" + ay + "_" + kw + ".pdf")
+    fm.append('pdf_path: "' + pdf_file + '"')
     fm.append('zotero_select: "zotero://select/library/items/@' + ck + '"')
     fm.append("tags:")
     fm.append("  - 文獻/" + topic)
@@ -174,7 +175,7 @@ def build_knowledge_md(meta, fields, sec0, sec1, sec3, selfcheck, needs_review, 
     out = ["\n".join(fm), ""]
     out.append("# " + topic + "_" + ay + "_" + kw + "_知識")
     out.append("")
-    out.append("> 📎 原文 PDF：[[" + topic + "_" + ay + "_" + kw + ".pdf]]")
+    out.append("> 📎 原文 PDF：[[" + pdf_file + "]]")
     out.append("")
     out.append("**範本對齊確認**：本檔由舊版分析檔經 Mode C 機械拆分產生，"
                "格式深度基準為 `references/example-literature-knowledge.md`（隨 skill 同捆範本）。")
@@ -197,7 +198,7 @@ def build_knowledge_md(meta, fields, sec0, sec1, sec3, selfcheck, needs_review, 
     return "\n".join(out).rstrip() + "\n"
 
 
-def build_application_md(meta, fields, sec2, paper_id, knowledge_rel, needs_review):
+def build_application_md(meta, fields, sec2, paper_id, needs_review):
     ck = meta["citation_key"]
     topic, ay, kw = meta["topic"], meta["authoryear"], meta["keyword"]
     fm = ["---", "citation_key: " + ck, "type: literature-application",
@@ -261,7 +262,7 @@ def process_file(path, out_dir, paper_id, vault_prefix, index, pdf_dir=None):
     know_md = build_knowledge_md(meta, fields, bucket["sec0"], bucket["sec1"],
                                  bucket["sec3"], bucket["selfcheck"], needs_review, pdf_name)
     app_md = build_application_md(meta, fields, bucket["sec2"], paper_id,
-                                  knowledge_rel, needs_review)
+                                  needs_review)
     os.makedirs(out_dir, exist_ok=True)
     with open(os.path.join(out_dir, know_name), "w", encoding="utf-8") as f:
         f.write(know_md)

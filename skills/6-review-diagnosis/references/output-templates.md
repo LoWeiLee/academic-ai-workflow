@@ -205,7 +205,7 @@ Q1.1 ……
 
 Dear Editor and Reviewers,
 
-We thank the editor and the two reviewers for their constructive comments and suggestions, which have helped us significantly improve the manuscript. We have carefully revised the manuscript according to all comments. Below please find our point-by-point responses, with the relevant changes highlighted in the revised manuscript.
+We thank the editor and the reviewers for their constructive comments and suggestions, which have helped us significantly improve the manuscript. We have carefully revised the manuscript according to all comments. Below please find our point-by-point responses, with the relevant changes highlighted in the revised manuscript.
 
 Sincerely,
 [作者]

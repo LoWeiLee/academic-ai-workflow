@@ -4,7 +4,7 @@
 
 ## 1. 文件與 Skill 主體 — CC BY 4.0
 
-除下列第 2、3 節另有規定外，本儲存庫的所有內容（含七支 skill 的 SKILL.md 與 references/、控制檔模板、資料夾骨架、白皮書與指南文件）採用
+除下列第 2、3 節另有規定外，本儲存庫的所有內容（含第 1 至 6 支 skill 的 SKILL.md 與 references/、控制檔模板、資料夾骨架、白皮書與指南文件）採用
 **Creative Commons Attribution 4.0 International (CC BY 4.0)** 授權。
 你可以自由分享與改作（含商業用途），但必須署名原作者 **Lo-Wei Lee（李洛維）** 並註明出處與變更。
 授權全文：https://creativecommons.org/licenses/by/4.0/legalcode

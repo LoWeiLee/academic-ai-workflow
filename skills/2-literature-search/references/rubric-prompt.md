@@ -1,7 +1,7 @@
 # rubric-prompt.md — literature-search 階段三 rubric 判讀參考檔
 
 > 進入階段三（判讀分桶）時載入。本檔承載 rubric 四維度定義、anchor examples 與 LLM 判讀的 prompt 結構。
-> **prompt 版本**：v1.0.0｜公版初版。版本號寫入 search_log 簽名區。
+> **prompt 版本**：v1.0.1｜紅隊審查修訂。版本號寫入 search_log 簽名區。
 > **硬性規則**：rubric 判讀一律採 LLM 語義判讀；**禁止使用關鍵字匹配**（如 `if 'keyword' in text`）作為判讀方式。
 
 ---
@@ -75,6 +75,8 @@
 | 2 | 合格 SSCI/TSSCI venue 或 top venue 但 citation 偏低 | 領域一般期刊，25 cites（2021）|
 | 1 | 合格但邊緣 venue，或預印本但作者具聲望 | 新興期刊 / SSRN working paper by 知名學者 |
 | 0 | 掠奪性期刊、非同儕審查、citation 異常低 | 邊緣期刊 / 0 cites after 3 years |
+
+> 註：SSCI／TSSCI 為在地示例的期刊分級，請依你所屬學術體系的分級標準替換。
 
 ---
 

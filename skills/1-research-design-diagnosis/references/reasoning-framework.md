@@ -1,7 +1,7 @@
 ---
 title: 論證與推論框架（reasoning-framework）
-role: research-design-diagnosis 專用 reference（按需載入）
-version: v1.0.0（公版初版）
+role: 共用 reference（按需載入）。本檔為本 skill 的隨附副本；research-design-diagnosis、literature-synthesis、chapter-drafting、review-diagnosis 四支各帶一份，內容以四份一致為準。
+version: v1.0.1（紅隊審查修訂）
 ---
 
 # 論證與推論框架（reasoning-framework）
@@ -73,4 +73,4 @@ version: v1.0.0（公版初版）
 
 ---
 
-*版本紀錄見 repo CHANGELOG。*
+*本檔為四支 skill 共用的隨附副本，四份內容一致；修改時四份須同步更新並驗證 diff 為空。版本紀錄見 repo CHANGELOG。*

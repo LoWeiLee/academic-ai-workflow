@@ -3,10 +3,10 @@ name: chapter-drafting
 description: "章節撰寫協作技能。當使用者準備將 paper-structure.md 與 literature-synthesis 綜整檔落實為期刊章節內文、或對既有章節草稿進行重寫修訂時，必須使用此技能。觸發情境包括：「幫我寫第二章 2.2 節」、「這一節我們開始動筆」、「把綜整檔落筆成章節正文」、「這段草稿幫我重寫」、「從論述邏輯展開為段落」。界定：本技能負責**段落撰寫層**（把已定結構與綜整落筆成正文、重寫修訂）；章節**結構**的增刪調整屬 research-design-diagnosis、找/建文獻池屬 literature-search、跨篇綜整屬 literature-synthesis、審稿/找問題/診斷屬 review-diagnosis。觸發後強制讀取 paper-structure.md 對應章節、目標主題的 literature-synthesis 綜整知識檔與該 paper 的綜整應用檔、writing-standards.md、folder-instructions.md，並以「段落骨架 + 推薦句型 + 引用建議」的中等自由度、配合「寫一段確認一段」的漸進式互動模式協作，嚴格禁止引入未經 literature-analysis / literature-synthesis 審核的新文獻。"
 ---
 
-# 章節撰寫協作（chapter-drafting）v1.0.0
+# 章節撰寫協作（chapter-drafting）v1.0.1
 
 > 本檔守決策層（必讀閘門、五階段流程、自由度邊界、引用紀律、觸發閾值、介面合約）。逐字輸出模板下放 `references/`，於對應時機才載入：
-> - `references/format-templates.md` —— 啟動宣告、段落骨架、填充稿、白名單外警示、機制一/二觸發回應、小節署名、Part 7 自檢清單（撰寫循環時載入）
+> - `references/format-templates.md` —— 啟動宣告、段落骨架、填充稿、白名單外警示、機制範本一/二觸發回應、小節署名、Part 7 自檢清單（撰寫循環時載入）
 > - `references/reasoning-framework.md` —— 論證與推論框架，多支 skill 共用副本（Part 2.6 因果/規範 claim 語氣對照時載入）
 >
 > 變更歷程見 repo CHANGELOG，本檔不嵌補丁說明。
@@ -28,7 +28,7 @@ description: "章節撰寫協作技能。當使用者準備將 paper-structure.m
 | 1 | `00_專案控制/paper-structure.md` | 取得目標章節的論述邏輯、核心任務、字數目標、引用配置 | 回覆「paper-structure.md 必讀，請確認此檔存在」 |
 | 2 | `00_專案控制/research-identity.md` | 取得使用者的學術定位、寫作慣性自我申報清單、AI 協作觸發時機 | 回覆「請先確認 research-identity.md 存在於 00_專案控制/」 |
 | 3 | `00_專案控制/writing-standards.md` | 取得禁止清單、學術中文語氣、引用格式、**使用者寫作風格庫**（語感對齊基準，若已建立）、AI 介入機制（依使用者自訂慣性清單） | 回覆「writing-standards.md 必讀，請補齊後重新啟動」 |
-| 4 | 對應 Paper 的 `folder-instructions.md` | 取得該論文的專屬協作原則與**第 I 部分品質閘門**（Part 3.3、4.2 動態讀取） | 若不存在則改走 Global Instructions，並主動提示使用者 |
+| 4 | 對應 Paper 的 `folder-instructions.md`（選配） | 取得該論文的專屬協作原則與**第 I 部分品質閘門**（Part 3.3、4.2 動態讀取） | 該檔不存在＝此專案無專屬品質閘門，僅以 `00_專案控制/` 四份控制檔為準即可（此為常態，不需提示為缺失） |
 | 5 | **目標主題的綜整知識檔＋該 paper 的綜整應用檔（兩份皆必讀）** | 知識檔提供概念節點庫、理論版圖、隱性假設（寫什麼）；應用檔提供缺口定位、5.1 論述邏輯、5.2 引用配置、5.4 概念使用對照（怎麼為這篇鋪） | **缺任一份即拒絕啟動**，回覆「本 Skill 的引用紀律以 literature-synthesis 雙檔（知識＋應用）為基礎，請先透過 literature-synthesis 產出對應主題的綜整，或明確告知改走『無綜整模式』（不建議，會大幅削弱引用準確性）」 |
 
 **無綜整模式（0.1 表列 5 的逃生門，僅經使用者明確選擇時生效）**：白名單縮為 2.1 第 2–4 優先（paper-structure ✅ 文獻＋argument-bank＋單篇 literature-analysis 分析檔）；Part 2.5 引用下鑽由例外升為**預設必查**（每個引用都回查單篇分析檔）；啟動宣告標「無綜整模式」，且每完成一節即建議補跑 literature-synthesis。無單篇分析檔的文獻仍走 2.2 四選項，不因無綜整而放寬白名單。
@@ -173,21 +173,21 @@ description: "章節撰寫協作技能。當使用者準備將 paper-structure.m
 
 ## Part 3｜主動介入的觸發機制
 
-> 本 Part 的「為何要管控」說理以 `writing-standards.md`「機制一：文獻回顧擴張」「機制二：後設思維漂移」為準，本 Skill 不重複論述其理由，僅提供可機械偵測的**操作化閾值**作為觸發條件。以下「文獻回顧擴張」「後設思維漂移」為使用者自訂慣性清單中的兩則常見示例；若使用者的慣性清單內容不同，觸發條件與回應語需對應調整。觸發回應的固定格式見 `references/format-templates.md`。
+> 本 Part 的「為何要管控」說理以 `writing-standards.md`「機制範本一：內容擴張類慣性」「機制範本二：抽象層次漂移類慣性」為準，本 Skill 不重複論述其理由，僅提供可機械偵測的**操作化閾值**作為觸發條件。以下「文獻回顧擴張」「後設思維漂移」為使用者自訂慣性清單中的兩則常見示例；若使用者的慣性清單內容不同，觸發條件與回應語需對應調整。觸發回應的固定格式見 `references/format-templates.md`。
 
-### 3.1 文獻回顧擴張觸發（機制一的操作化）
+### 3.1 文獻回顧擴張觸發（機制範本一的操作化）
 
 任一出現即觸發：本節累積字數超過 paper-structure.md 估算上限 20%；單段連續引用超過 3 篇且無跨引用的綜整性分析；使用者提出「把 [白名單外文獻] 也加進來」時。觸發回應依 format-templates「Part 3.1」固定格式，不得省略。
 
-### 3.2 後設思維漂移觸發（機制二的操作化）
+### 3.2 後設思維漂移觸發（機制範本二的操作化）
 
 觸發條件：段落論述從「本章要論證什麼」漂移至「這類研究的學術意義」或「元理論層次」時。觸發回應依 format-templates「Part 3.2」固定格式。
 
-### 3.3 專案專屬觸發（動態讀取 folder-instructions.md 第 I 部分）
+### 3.3 專案專屬觸發（動態讀取 folder-instructions.md 第 I 部分，選配）
 
-**啟動時讀取當前專案 `folder-instructions.md` 第 I 部分的品質閘門，作為專案專屬觸發規則逐項監測。** 不在本 SKILL.md 內硬編碼任何特定專案的觸發條件——專案閘門隨 folder-instructions.md 演進，本 Skill 只負責「逐條讀取並在撰寫中監測」。
+**若當前專案有 `folder-instructions.md`，啟動時讀取其第 I 部分的品質閘門，作為專案專屬觸發規則逐項監測。** 不在本 SKILL.md 內硬編碼任何特定專案的觸發條件——專案閘門隨 folder-instructions.md 演進，本 Skill 只負責「逐條讀取並在撰寫中監測」。
 
-執行方式：啟動清點時將 folder 第 I 部分每一條閘門列入「本次專案觸發清單」並於啟動宣告載明條數；每段填充後對照逐條檢查，命中即以該閘門指定回報語回應使用者；若無第 I 部分，於啟動時提示使用者「建議補齊或改走 Global」。
+執行方式：啟動清點時將 folder 第 I 部分每一條閘門列入「本次專案觸發清單」並於啟動宣告載明條數；每段填充後對照逐條檢查，命中即以該閘門指定回報語回應使用者。**該檔或其第 I 部分不存在時**：代表此專案未另設專屬閘門，僅以 `00_專案控制/` 四份控制檔（特別是 `writing-standards.md`）為準即可，於啟動宣告載明「本次專案觸發清單：0 條」後正常推進，不視為缺失、不中斷。
 
 （以下為範例，實際閘門依你的專案而定：某專案的 folder 第 I 部分閘門可能包含核心理論／概念定義一致性、實務與理論的雙向對話要求、論證強度上限、研究倫理與資料安全等；但這些以 folder 檔為準，非寫死於此。）
 
@@ -216,9 +216,9 @@ description: "章節撰寫協作技能。當使用者準備將 paper-structure.m
 | 3 | 論證是否回應了 paper-structure.md 聲明的研究貢獻 | 通用 |
 | 4 | 符合 writing-standards.md 規格（含使用者寫作風格庫語感對齊，若已建立） | 通用 |
 | 4a | 2.2 選項 C 授權的「待補」引用已列成待補清單（含授權時點與預計補分析時機）；本節無未登記的 [待證] 殘留 | 通用 |
-| 5+ | **folder-instructions.md 第 I 部分各閘門逐條** | 專案動態 |
+| 5+ | **folder-instructions.md 第 I 部分各閘門逐條**（若該檔存在） | 專案動態 |
 
-執行時將 folder 第 I 部分每一條閘門展開為一個檢核列，與第 1–4 項並列回報。
+執行時將 folder 第 I 部分每一條閘門展開為一個檢核列，與第 1–4 項並列回報；該檔不存在時，本表止於第 4a 項即為完整檢核。
 
 ### 4.3 檔案輸出規則
 
@@ -267,7 +267,7 @@ description: "章節撰寫協作技能。當使用者準備將 paper-structure.m
 
 ## Part 7｜自檢清單（Skill 層級，≤10 項，不入正文）
 
-每個小節完成後，Skill 於檔案末尾以 `<!-- -->` 註解記錄自檢結果。清單格式見 `references/format-templates.md`「Part 7 自檢清單」（涵蓋必讀白名單、五階段確認、引用白名單與頁碼一致、無 3 篇堆疊、機制一/二觸發判斷、folder 閘門逐條、署名與收尾檢核、Write 寫入位置、範本與風格庫對齊）。
+每個小節完成後，Skill 於檔案末尾以 `<!-- -->` 註解記錄自檢結果。清單格式見 `references/format-templates.md`「Part 7 自檢清單」（涵蓋必讀白名單、五階段確認、引用白名單與頁碼一致、無 3 篇堆疊、機制範本一/二觸發判斷、folder 閘門逐條、署名與收尾檢核、Write 寫入位置、範本與風格庫對齊）。
 
 ---
 
@@ -295,10 +295,8 @@ chapter-drafting 產出的章節草稿是 review-diagnosis 自我審稿的對象
 
 ## 版本資訊
 
-**版本**：v1.0.0｜公版初版
+**版本**：v1.0.1｜紅隊審查修訂
 **變更歷程**：詳見 repo CHANGELOG
 
 ---
 
-*SKILL 撰寫：Claude（Cowork 模式）　協作決策：使用者*
-*本 SKILL 草稿寫入 `05_輸出/` 由使用者手動安裝至 skills*

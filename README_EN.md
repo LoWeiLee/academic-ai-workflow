@@ -36,7 +36,7 @@ The layering answers not "where do files live" but "what do the human and the AI
 
    Skills 1–5 form the linear pipeline (design → search → analysis → synthesis → drafting); skill 6 is a cross-cutting QA stage that reviews any of their outputs; skill 7 is a parallel branch that feeds thematic results directly into drafting.
 
-**Governance base — folder read/write rules** (`starter-kit/`) — six folders map to research stages: `00_專案控制/` (control files), `01_文獻/` (literature), `02_資料與證據/` (data & evidence), `03_寫作/` (manuscripts), `04_審稿與回應/` (reviews & responses), `05_輸出/` (outputs). Folders `00`–`04` are read-only during task execution; `05_輸出/` is the AI's **only** writable area. Every output lands there first and is promoted to the formal folders only by the human. Authority separation is enforced by the file system, not by promises.
+**Governance base — folder read/write rules** (`starter-kit/`) — six folders map to research stages: `00_專案控制/` (control files), `01_文獻/` (literature), `02_資料與證據/` (data & evidence), `03_寫作/` (manuscripts), `04_審稿與回應/` (reviews & responses), `05_輸出/` (outputs). Folders `00`–`04` are read-only during task execution; `05_輸出/` is the AI's **only** writable area. Every output lands there first and is promoted to the formal folders only by the human. Authority separation is enforced by the workflow's institutions and by the clauses inside each skill, with "the human moves the file = the human signs off" as the last line of defense.
 
 ## The core mechanism: a fabrication-proofing chain
 

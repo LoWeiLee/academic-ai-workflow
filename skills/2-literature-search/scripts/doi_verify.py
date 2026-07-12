@@ -24,7 +24,7 @@ doi_verify.py — literature-search 種子 DOI 驗證腳本
 - 本腳本只負責 API 呼叫與 JSON 輸出到 stdout，不寫工作區檔案（由 Claude 用 Write tool 落檔）
 - 每次呼叫處理的提名數不宜過多（建議 ≤ 5 篇），避免單次 bash 逾時
 """
-import sys, json, time, urllib.parse, urllib.request
+import sys, json, time, urllib.parse, urllib.request, urllib.error
 
 OPENALEX = "https://api.openalex.org"
 S2 = "https://api.semanticscholar.org/graph/v1"
@@ -142,7 +142,15 @@ def verify_one(item):
     return out
 
 
+def _warn_mailto():
+    """MAILTO 仍為佔位符時印一行提示（不中斷）。OpenAlex polite pool 為禮貌性建議，非硬性要求。"""
+    if MAILTO.startswith("YOUR_EMAIL"):
+        print("提示：MAILTO 仍為佔位符，未加入 OpenAlex polite pool（服務品質可能較不穩定，但不影響執行）。"
+              "如需設定，請修改你實際安裝的那份 skill 內 scripts/ 三支腳本的 MAILTO 值。", file=sys.stderr)
+
+
 def main():
+    _warn_mailto()
     if len(sys.argv) >= 3 and sys.argv[1] == "--file":
         with open(sys.argv[2], encoding="utf-8") as f:
             items = json.load(f)

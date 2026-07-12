@@ -1,20 +1,3 @@
-# Skill 4 範本（應用檔）：跨文件主題綜整應用
-
-> **本範本之文獻、期刊、數據皆為虛構，僅示範本 skill 的輸出格式與綜整深度。**
-
-**對應 SKILL 版本**：literature-synthesis v1.0.0
-**範本性質**：synthesis-application 執行範例，示範應用檔（綁定 paper_id、一次性）的結構、深度與語調；示範素材為「參與式預算」主題 6 篇虛構單篇分析，對應虛構示範論文之 paper-structure v1.0
-
-**使用原則**：
-- 執行 Skill 4 Mode A 時，本檔於第零階段與知識範本一併強制讀取，作為應用檔格式、深度、語調的對齊基準
-- 應用檔承載「對本研究的定位與寫作指引」——本主題對當前研究的整體意義、研究缺口定位、文獻回顧架構、概念與共識的章節使用對照
-- 應用檔綁定單一 paper，可多份（一 paper 一份）；`knowledge_note` 以 Obsidian wikilink 連結知識檔正本，`synthesis_knowledge_version` 記錄本檔對著哪個知識版本建立
-- 章節落點一律使用 paper-structure 的現行小節編號（本檔對齊 v1.0 的 2.x.y 層級），paper-structure 改版時應用檔應重產或修訂
-- 遇 SKILL 與範本不一致的罕見情境，依 Global 範本優先原則判斷
-
----
-
-```yaml
 ---
 type: synthesis-application
 topic: 參與式預算
@@ -22,12 +5,27 @@ paper_id: demo-pb-trust
 knowledge_note: "[[參與式預算_綜整知識]]"
 synthesis_knowledge_version: 1
 applied_date: 2026-07-10
-synthesized_by_skill_version: literature-synthesis-v1.0.0
+synthesized_by_skill_version: literature-synthesis-v1.0.1
 tags:
   - paper/demo-pb-trust
   - 綜整/參與式預算
 ---
-```
+
+# Skill 4 範本（應用檔）：跨文件主題綜整應用
+
+> **本範本之文獻、期刊、數據皆為虛構，僅示範本 skill 的輸出格式與綜整深度。**
+
+**對應 SKILL 版本**：literature-synthesis v1.0.1
+**範本性質**：synthesis-application 執行範例，示範應用檔（綁定 paper_id、一次性）的結構、深度與語調；示範素材為「參與式預算」主題 6 篇虛構單篇分析，對應虛構示範論文之 paper-structure v1.0
+
+**使用原則**：
+- 執行 Skill 4 Mode A 時，本檔於第零階段與知識範本一併強制讀取，作為應用檔格式、深度、語調的對齊基準
+- 應用檔承載「對本研究的定位與寫作指引」——本主題對當前研究的整體意義、研究缺口定位、文獻回顧架構、概念與共識的章節使用對照
+- 應用檔綁定單一 paper，可多份（一 paper 一份）；`knowledge_note` 以 Obsidian wikilink 連結知識檔正本，`synthesis_knowledge_version` 記錄本檔對著哪個知識版本建立
+- 章節落點一律使用 paper-structure 的現行小節編號（本檔對齊 v1.0 的 2.x.y 層級），paper-structure 改版時應用檔應重產或修訂
+- 遇 SKILL 與範本不一致的罕見情境，依本 SKILL「範本優先原則」節判斷
+
+---
 
 # 參與式預算_綜整應用_demo-pb-trust
 

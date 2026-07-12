@@ -4,7 +4,7 @@ type: literature-application
 paper_id: paper-1
 knowledge_note: "參與式預算_Chen2018_PBCivicTrust_知識.md"
 applied_date: 2026-07-10
-analyzed_by_skill_version: literature-analysis-v4.1
+analyzed_by_skill_version: literature-analysis-v1.0.1
 tags:
   - paper/paper-1
   - 文獻/參與式預算
@@ -18,7 +18,7 @@ tags:
 
 > ⚠️ **本範本之文獻、期刊、數據皆為虛構，僅示範本 skill 的輸出格式與分析深度。** 「Chen & Lin (2018)」《Journal of Public Deliberation Studies》與所綁定的＜示範論文＞皆為示範用途而杜撰，不得作為真實文獻或真實研究引用。
 
-> 本檔為 literature-analysis v4.1 應用檔範本（綁定示範論文 paper-1）。它示範一份「綁定特定論文」的應用文件應有的內容：應用摘要（直接用途＋本研究警示）與 Section 2 的章節級具體啟發，且每條應用建議依推論稽核標記依據類型——(a) 本篇內生／(b) 脈絡對接／(c) 分析者推論。
+> 本檔為 literature-analysis v1.0.1 應用檔範本（綁定示範論文 paper-1）。它示範一份「綁定特定論文」的應用文件應有的內容：應用摘要（直接用途＋本研究警示）與 Section 2 的章節級具體啟發，且每條應用建議依推論稽核標記依據類型——(a) 本篇內生／(b) 脈絡對接／(c) 分析者推論。
 
 ---
 
@@ -117,4 +117,4 @@ Chen & Lin 建立了「參與經由程序公平感生信任」，但沒有回答
 
 ---
 
-分析完成時間：2026-07-10　　分析者：Claude（Cowork 模式，literature-analysis v4.1 應用檔範本｜公版示範，虛構文獻）
+分析完成時間：2026-07-10　　分析者：Claude（Cowork 模式，literature-analysis v1.0.1 應用檔範本｜公版示範，虛構文獻）

@@ -1,15 +1,12 @@
 ---
 title: 論證與推論框架（reasoning-framework）
-role: canonical 正本（各支 references/reasoning-framework.md 為逐字副本）
-version: v1
-created: 2026-06-27
-edit_point: 唯一編輯點為本正本；修改後重生成各副本並驗證逐字一致
-source: 借鑑既有論證推論與審稿品質思考方法論（知識論狀態對照）
+role: 共用 reference（按需載入）。本檔為本 skill 的隨附副本；research-design-diagnosis、literature-synthesis、chapter-drafting、review-diagnosis 四支各帶一份，內容以四份一致為準。
+version: v1.0.1（紅隊審查修訂）
 ---
 
 # 論證與推論框架（reasoning-framework）
 
-> **性質**：判斷層認知框架，按需載入。用途是輔助「如何思考」一個論證強不強，不是逐條打勾的檢查表。各支引用點見第 5 節與對齊規格。
+> **性質**：判斷層認知框架，按需載入。用途是輔助「如何思考」一個論證強不強，不是逐條打勾的檢查表。整合 Toulmin 論證分析、Bradford Hill 因果判準、IBE 最佳解釋推論、知識論狀態語氣對照四種通用學術論證評估工具。各支引用點見第 5 節。
 > **與 writing-standards 的關係**：第 4 節「知識論狀態→語氣」是 writing-standards「推論強度必須與研究設計相符」的操作化工具。
 
 ---
@@ -65,7 +62,7 @@ source: 借鑑既有論證推論與審稿品質思考方法論（知識論狀態
 
 ---
 
-## 5. 各支應用點（與對齊規格一致）
+## 5. 各支應用點
 
 | skill | 主要用法 | 載入時機 |
 |-------|---------|---------|
@@ -76,4 +73,4 @@ source: 借鑑既有論證推論與審稿品質思考方法論（知識論狀態
 
 ---
 
-*canonical 正本。各支 `references/reasoning-framework.md` 須為本檔逐字副本；唯一編輯點為本 skill 套件內建的正本檔案。修改流程：改正本 → 重生成各副本 → 驗證 diff 為空。*
+*本檔為四支 skill 共用的隨附副本，四份內容一致；修改時四份須同步更新並驗證 diff 為空。版本紀錄見 repo CHANGELOG。*

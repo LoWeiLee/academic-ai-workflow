@@ -46,7 +46,14 @@ def _get(url, timeout):
 def validate_fix(query):
     """boolean 運算子大寫化；檢查雙引號平衡。回傳 (fixed_query, notes)。"""
     notes = []
-    fixed = re.sub(r"\b(and|or|not)\b", lambda m: m.group(1).upper(), query)
+    # 只對「雙引號片語之外」的 boolean 運算子大寫化——片語內的 and/or/not 是檢索詞的一部分，
+    # 誤大寫會改變 OpenAlex 的片語比對結果（例："trust and control" -> "trust AND control"）。
+    def _upper_outside_quotes(q):
+        parts = q.split('"')
+        for i in range(0, len(parts), 2):  # 偶數索引＝引號外
+            parts[i] = re.sub(r"\b(and|or|not)\b", lambda m: m.group(1).upper(), parts[i])
+        return '"'.join(parts)
+    fixed = _upper_outside_quotes(query)
     if fixed != query:
         notes.append("已將小寫 boolean 運算子大寫化")
     if fixed.count('"') % 2 != 0:
@@ -136,7 +143,15 @@ def run(query, mode):
     return _finalize(out)
 
 
+def _warn_mailto():
+    """MAILTO 仍為佔位符時印一行提示（不中斷）。OpenAlex polite pool 為禮貌性建議，非硬性要求。"""
+    if MAILTO.startswith("YOUR_EMAIL"):
+        print("提示：MAILTO 仍為佔位符，未加入 OpenAlex polite pool（服務品質可能較不穩定，但不影響執行）。"
+              "如需設定，請修改你實際安裝的那份 skill 內 scripts/ 三支腳本的 MAILTO 值。", file=sys.stderr)
+
+
 def main():
+    _warn_mailto()
     if len(sys.argv) < 2:
         print("usage: keyword_search.py '<boolean_query>' [--mode trial|full]", file=sys.stderr)
         sys.exit(1)

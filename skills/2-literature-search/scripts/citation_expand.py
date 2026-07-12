@@ -20,7 +20,7 @@ citation_expand.py — literature-search 雙向引用網絡擴展腳本
 設計原則：只負責 API 呼叫與 JSON 輸出，不寫工作區檔案。單次處理 1 顆種子的單方向，
 避免 45 秒 bash timeout；both 方向且 backward references 多時，建議改逐方向呼叫。
 """
-import sys, json, time, datetime, urllib.parse, urllib.request
+import sys, json, time, datetime, urllib.parse, urllib.request, urllib.error
 
 OPENALEX = "https://api.openalex.org"
 S2 = "https://api.semanticscholar.org/graph/v1"
@@ -34,7 +34,7 @@ TIMEOUT = 30
 
 
 def _now():
-    return datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def _get(url, timeout=TIMEOUT):
@@ -153,7 +153,15 @@ def s2_fallback(seed, kind, top):
     return out
 
 
+def _warn_mailto():
+    """MAILTO 仍為佔位符時印一行提示（不中斷）。OpenAlex polite pool 為禮貌性建議，非硬性要求。"""
+    if MAILTO.startswith("YOUR_EMAIL"):
+        print("提示：MAILTO 仍為佔位符，未加入 OpenAlex polite pool（服務品質可能較不穩定，但不影響執行）。"
+              "如需設定，請修改你實際安裝的那份 skill 內 scripts/ 三支腳本的 MAILTO 值。", file=sys.stderr)
+
+
 def main():
+    _warn_mailto()
     if len(sys.argv) < 2:
         print("usage: citation_expand.py <seed_doi_or_workid> [--direction forward|backward|both] [--top N]",
               file=sys.stderr)
