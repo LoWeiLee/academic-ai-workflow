@@ -1,6 +1,7 @@
 # academic-ai-workflow
 
 **English** ｜ [繁體中文](README_CHT.md)
+
 This project's primary documentation is written in Traditional Chinese. For a comprehensive explanation of the design principles and system architecture, see the [Workflow Architecture White Paper](docs/工作流架構白皮書.md). For installation and usage instructions, see the [Quick Start Guide](docs/快速上手指南.md).
 
 > What I am really doing is handing my own judgment and domain knowledge to the AI, wholesale, training it into a version of me that never tires.
