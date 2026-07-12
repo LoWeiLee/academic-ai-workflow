@@ -58,8 +58,8 @@ git clone https://github.com/LoWeiLee/academic-ai-workflow.git
 ```
 
 1. Copy `starter-kit/` as your research workspace and fill in the four control files (templates include field-by-field guidance and fictional examples).
-2. Install the seven skills from `skills/packaged/` (or start with skills 2 + 3 only).
-3. Run a small real topic through search → analysis to feel the handoff rhythm, then scale up.
+2. Install the seven skills from `skills/packaged/` (or start with skills 1 + 3 only).
+3. Run a small real topic through RQ establish → literature analysis to feel the handoff rhythm, then scale up.
 
 Step-by-step instructions (Traditional Chinese): [docs/快速上手指南.md](docs/快速上手指南.md).
 
