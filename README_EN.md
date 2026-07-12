@@ -57,7 +57,7 @@ The shared philosophy: never trust a single point, never trust memory, never let
 git clone https://github.com/LoWeiLee/academic-ai-workflow.git
 ```
 
-1. Copy `starter-kit/` as your research workspace and fill in the four control files (templates include field-by-field guidance and fictional examples).
+1. Copy `starter-kit/` as your research workspace. All four control-file templates must stay in `00_專案控制/` — the skills read them directly and a missing file halts the stage — but **only two need writing on your first run**: `about-me.md` and `research-identity.md`. Leave `writing-standards.md` on its defaults and `portfolio-status.md` empty for now. (Templates include field-by-field guidance and fictional examples.)
 2. Install the seven skills from `skills/packaged/` (or start with skills 1 + 3 only).
 3. Run a small real topic through RQ establish → literature analysis to feel the handoff rhythm, then scale up.
 

@@ -17,10 +17,16 @@
 - 白皮書 §7.1 補「環境的一則說明」，指出 §2.4（唯一寫入區）與 §5（狀態必須落檔）預設持久檔案系統，並指向 claude.ai 路徑
 - `docs/進階_知識庫與Obsidian整合.md`：frontmatter 的消費端由「Cowork 端」改為「工作流端」（不限執行環境）
 
+**控制檔口徑統一為「四份就位、兩份必填」**
+- 修掉五份文件的三種說法：`starter-kit/README.md` 說「使用前請完整填寫」（最嚴）、白皮書 §7.1 與 README×2 說「填寫四份」（中）、快速上手指南說「首跑只需兩份」（最寬）。歧異的根源是「填」這個動詞混用了「檔案就位」與「客製化撰寫」兩個動作
+- 統一表述：**四份模板都必須留在 `00_專案控制/`**——skill 直接讀取，缺檔會使工序中斷（chapter-drafting 缺 `writing-standards.md` 即停止，thematic-analysis 缺 `research-identity.md` 亦然）；**但首跑只需動筆客製化兩份**（`about-me.md`、`research-identity.md`），`writing-standards.md` 沿用模板預設條文、`portfolio-status.md` 可留空
+- 修掉快速上手指南第二步的內部打架：標題說「四份」、內文說「兩份」、下一段又給四份的填寫順序
+- 四份控制檔模板的 frontmatter `note` 同步校正（原本一律寫「使用前請完整填寫」，`writing-standards.md` 改為「首跑不必動筆，但必須留在資料夾」、`portfolio-status.md` 改為「首跑可留空，但必須留在資料夾」）
+- `starter-kit/README.md` 另補 claude.ai 使用者的 Project files 替代路徑（原文只講 Cowork 的資料夾入口）
+
 **下一版待辦（v1.1）**
 - 七支 SKILL.md 補上「無工作區資料夾」的自動降級分支，取代目前的人工開場宣告
 - skill 原始檔與範本中殘留的「Cowork 端」「分析者：Claude（Cowork 模式）」等環境代名詞收斂為環境中立表述
-- `starter-kit/README.md` 補上 claude.ai 使用者的 Project files 替代路徑
 
 ## v1.0.1（紅隊審查修訂，2026-07-12）
 

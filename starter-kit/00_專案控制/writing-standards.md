@@ -1,7 +1,7 @@
 ---
 title: writing-standards
 template_version: v1.0.0
-note: 模板版 v1.0.0｜使用前請完整填寫。本檔多數條文為通用學術寫作規範，可直接沿用；標示「填寫指引」處請依你的情況調整或補全。
+note: 模板版 v1.0.0｜**首跑不必動筆，但本檔必須留在 00_專案控制/**（chapter-drafting、review-diagnosis、thematic-analysis 直接讀取，缺檔會使工序中斷）。本檔多數條文為通用學術寫作規範，可直接沿用預設；標示「填寫指引」處請依你的情況調整或補全，「個人風格庫」可先留空、日後累積。
 ---
 
 # writing-standards.md
