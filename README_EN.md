@@ -1,14 +1,13 @@
 # academic-ai-workflow
 
 **English** ｜ [繁體中文](README_CHT.md)
+This project's primary documentation is written in Traditional Chinese. For a comprehensive explanation of the design principles and system architecture, see the [Workflow Architecture White Paper](docs/工作流架構白皮書.md). For installation and usage instructions, see the [Quick Start Guide](docs/快速上手指南.md).
 
 > What I am really doing is handing my own judgment and domain knowledge to the AI, wholesale, training it into a version of me that never tires.
 >
 > The quality and integrity dilemmas of AI-assisted research are not a problem of technique but of governance. The answer lies not at the level of a single conversation (prompting), but in building the researcher's judgment into a machine-readable, executable, and auditable architecture (harnessing).
 >
 > What belongs in the automated execution layer and what must stay in your hands is a call only someone who does the research by hand, every day, can make.
-
-This project's primary documentation is written in Traditional Chinese. For a comprehensive explanation of the design principles and system architecture, see the [Workflow Architecture White Paper](docs/工作流架構白皮書.md). For installation and usage instructions, see the [Quick Start Guide](docs/快速上手指南.md).
 
 ## The problem
 
