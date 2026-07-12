@@ -8,9 +8,9 @@
 >
 > What belongs in the automated execution layer and what must stay in your hands is a call only someone who does the research by hand, every day, can make.
 
-本專案主要文件為繁體中文。完整的設計原理與架構說明見[工作流架構白皮書](docs/工作流架構白皮書.md)，安裝與操作見[快速上手指南](docs/快速上手指南.md)。
-This README is the English overview; the full documentation is in Traditional Chinese.
+本專案主要文件為繁體中文。完整的設計原理與架構說明見[工作流架構白皮書]，安裝與操作見[快速上手指南]。
 
+This project's primary documentation is written in Traditional Chinese. For a comprehensive explanation of the design principles and system architecture, see the Workflow Architecture White Paper(docs/工作流架構白皮書.md). For installation and usage instructions, see the Quick Start Guide(docs/快速上手指南.md).
 ## The problem
 
 Generative AI is already inside research work. Used casually — one prompt, one output — it fabricates citations, attaches invented page numbers and claims to real papers, overstates causal language beyond what the research design supports, and degrades over long sessions. The common responses are prohibition or reliance on prompting skill. This project takes a third route, borrowed from public administration: treat the AI as a highly capable but imperfectly reliable agent, and govern it the way organizations govern agents — with **division of labor, delegation rules, audit trails, and version control**. Quality comes from reliable processes, not reliable individuals; that principle holds for AI too.
