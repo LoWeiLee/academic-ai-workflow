@@ -117,4 +117,4 @@ Chen & Lin 建立了「參與經由程序公平感生信任」，但沒有回答
 
 ---
 
-分析完成時間：2026-07-10　　分析者：Claude（Cowork 模式，literature-analysis v1.0.1 應用檔範本｜公版示範，虛構文獻）
+分析完成時間：2026-07-10　　分析者：Claude（literature-analysis v1.1.0 應用檔範本｜公版示範，虛構文獻）

@@ -1,5 +1,26 @@
 # CHANGELOG
 
+## v1.1.0（無工作區模式，2026-07-13）
+
+七支 skill 全數改版重打包。本版讓七支工序在**沒有持久工作區資料夾的環境**（claude.ai 網頁版）能自動降級運作，取代 v1.0.2 文件中要求使用者手動貼上的「開場宣告」。
+
+**新增：環境偵測與無工作區模式（七支逐字一致的統一條款）**
+- 七支 SKILL.md 於所有讀取動作之前新增「環境偵測」區塊：`00_專案控制/` 路徑不存在時，不得以「檔案缺失」為由拒絕啟動，一律進入無工作區模式
+- 無工作區模式三規則：(1) 控制檔改由對話附件 → Project files → 使用者指定位置依序查找，**此規則明文覆蓋各 skill 原有的「缺漏即拒絕啟動」硬閘門**（閘門的實質要求是「讀得到內容」，不是「檔案位於特定路徑」）；(2) 產出改以可下載檔案交付，不寫入 `05_輸出/`，晉升由使用者手動完成；(3) 跨 session 狀態（`progress-log.md`、chapter-drafting 的凍結段）改由使用者於開場提供前輪產出
+- 啟動宣告必須載明當前模式（「工作區模式」／「無工作區模式」）
+- 修掉的實際故障：chapter-drafting 的 Part 0.1「任一缺漏即拒絕啟動」、thematic-analysis 與 review-diagnosis 的必讀閘門，原本會在 claude.ai 上直接卡死無法啟動
+
+**literature-search：環境限制明文化**
+- 錯誤處理表補入具體事實：claude.ai 沙盒核准網域為固定白名單（PyPI／npm／GitHub／Ubuntu／crates.io ＋ Anthropic API），**不含** `api.openalex.org` 與 `api.semanticscholar.org`，Free／Pro／Max 無法自行增加網域（僅 Team／Enterprise 擁有者可自訂）。此環境下不必試搜，直接宣告環境阻擋並轉手動匯出模式
+
+**環境代名詞收斂為環境中立表述（10 處）**
+- 範本頁尾「分析者：Claude（Cowork 模式）」×5（skill 3、4 的四份範本與 skill 4 SKILL.md）、「撰寫協作：Claude（Cowork 模式）」×1（skill 5 format-templates）——**這一行會被複製進使用者的每一份產出檔**，等於在產出上蓋一個錯的環境戳章
+- `file-specs.md` 的「Cowork 端」→「工作流端」；skill 2 description 的「Cowork 沙盒限制」→「執行環境的沙盒限制」；skill 4 晉升流程補上無工作區模式的對應動作
+
+**打包**
+- 七支重打包為 `_v1.1.0.skill`，依白皮書「唯一正本、整包重打」紀律刪除 `_v1.0.1.skill`（版本回溯依靠 git 歷史）
+- 打包檔已驗證不含 `__pycache__`／`.pyc`
+
 ## v1.0.2（環境路徑澄清，2026-07-12）
 
 僅文件變更，skill 原始碼與打包檔未動（維持 v1.0.1）。
@@ -24,9 +45,7 @@
 - 四份控制檔模板的 frontmatter `note` 同步校正（原本一律寫「使用前請完整填寫」，`writing-standards.md` 改為「首跑不必動筆，但必須留在資料夾」、`portfolio-status.md` 改為「首跑可留空，但必須留在資料夾」）
 - `starter-kit/README.md` 另補 claude.ai 使用者的 Project files 替代路徑（原文只講 Cowork 的資料夾入口）
 
-**下一版待辦（v1.1）**
-- 七支 SKILL.md 補上「無工作區資料夾」的自動降級分支，取代目前的人工開場宣告
-- skill 原始檔與範本中殘留的「Cowork 端」「分析者：Claude（Cowork 模式）」等環境代名詞收斂為環境中立表述
+**下一版待辦（v1.1）**：已於 v1.1.0 完成，見上。
 
 ## v1.0.1（紅隊審查修訂，2026-07-12）
 

@@ -198,7 +198,7 @@ tags:
 ## Obsidian 相容性
 
 每份 `.md` 最前端的 YAML frontmatter 使檔案同時滿足三端：
-- **Cowork 端**：literature-synthesis 解析 metadata 自動建立文獻清單
+- **工作流端**：literature-synthesis 解析 metadata 自動建立文獻清單
 - **Obsidian 端**：貼入 vault 後 graph view、tag、Dataview、backlink 皆可運作
 - **Zotero 端**：citation_key 作為橋梁，從 Obsidian 連回 Zotero 條目
 
