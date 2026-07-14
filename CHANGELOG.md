@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## v1.1.2（第三批品質修訂與英文文件，2026-07-14）
+
+**skill 修訂（七支重打包為 `_v1.1.2.skill`）**
+- literature-analysis／literature-synthesis：兩支的虛構範例宇宙對齊——同一篇 Chen & Lin (2018) 的 citation_key 統一為 `chen2018participatory`（同時使範例符合 skill 3 自己的 key 生成規則）、頁碼全數收進 pp. 145–172、樣本數統一 N≈1,203，消除「範本示範違反 covers_citation_keys 逐字抄錄鐵律」的矛盾
+- thematic-analysis：coding reliability 路線的骨架版狀態於 description 與路線選擇表**預先揭露**（原本選路後才發現）；去識別化硬閘門補「同意書未明文涵蓋 AI 處理」的三條補救路徑（倫理會諮詢／概括條款之研究者具名判斷／退階處理），不再只有拒絕啟動一途；路線表 TSSCI 加在地示例註記
+- review-diagnosis：Mode C 補「自審非本管線產出的舊稿、無 paper-structure.md」降級處置；補 Mode E 輸出命名規則；口試模板抬頭「國立[學校]」中性化為「[學校名稱]」
+- literature-search：widget 降級條件明文納入 claude.ai 網頁版（可渲染但點擊回傳不通）；「機構 VPN」補白話說明（SKILL.md 與 output-formats.md）
+- research-design-diagnosis：必讀清單補 writing-standards.md 選讀列（階段二寫作要點的對應來源，原為懸空引用）
+- skill 1／5／7 必讀清單處補**控制檔模板出處**（starter-kit 連結）——單獨取得 .skill 檔的使用者原本無從得知模板長相
+
+**文件**
+- 快速上手指南 FAQ 新增兩題：資料安全與訓練政策（含官方隱私設定路徑與商用條款差異）、免費方案額度預期管理
+- README 與快速上手指南補**範例產出連結**（skill 3/4 的虛構示範檔）
+- 新增 `starter-kit/00_專案控制/README.md`（原五夾有 README 而 00 夾沒有）；starter-kit README 補「單獨複製時 docs 連結會失效」註記；README_CHT 移除自英文版複製的冗句
+- 新增英文版文件 `docs/en/`：quick-start-guide、using-on-claude-ai、architecture-whitepaper、advanced_obsidian-integration；README_EN 的文件連結改指英文版
+
 ## v1.1.1（第二輪紅隊審查修訂，2026-07-14）
 
 依第二輪紅隊審查結果修訂，七支重打包為 `_v1.1.1.skill`。

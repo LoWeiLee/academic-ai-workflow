@@ -2,7 +2,7 @@
 
 **English** ｜ [繁體中文](README_CHT.md)
 
-This project's primary documentation is written in Traditional Chinese. For a comprehensive explanation of the design principles and system architecture, see the [Workflow Architecture White Paper](docs/工作流架構白皮書.md). For installation and usage instructions, see the [Quick Start Guide](docs/快速上手指南.md). If you only have claude.ai (no Cowork / Claude Code), see [Using the skills on claude.ai](docs/在-claude-ai-上使用.md).
+For a comprehensive explanation of the design principles and system architecture, see the [Workflow Architecture White Paper](docs/en/architecture-whitepaper.md). For installation and usage instructions, see the [Quick Start Guide](docs/en/quick-start-guide.md). If you only have claude.ai (no Cowork / Claude Code), see [Using the skills on claude.ai](docs/en/using-on-claude-ai.md). (These are English translations; where wording differs, the [Traditional Chinese originals](README_CHT.md) govern.)
 
 > What I am really doing is handing my own judgment and domain knowledge to the AI, wholesale, training it into a version of me that never tires.
 >
@@ -61,9 +61,9 @@ git clone https://github.com/LoWeiLee/academic-ai-workflow.git
 2. Install the seven skills from `skills/packaged/` (or start with skills 1 + 3 only).
 3. Run a small real topic through RQ establish → literature analysis to feel the handoff rhythm, then scale up.
 
-Step-by-step instructions (Traditional Chinese): [docs/快速上手指南.md](docs/快速上手指南.md).
+Step-by-step instructions: [docs/en/quick-start-guide.md](docs/en/quick-start-guide.md).
 
-**Environment.** The full pipeline needs a **persistent workspace folder** — Claude Desktop's **Cowork** mode, or **Claude Code**. But all seven skills also install on **claude.ai in the browser** (Skills are available from the **Free plan** onward; just enable *Code execution and file creation* under Settings → Capabilities). What you get there is not a pipeline but **seven standalone tools**: handoffs between stages are manual file moves, `literature-search`'s automated search is unavailable (the sandbox domain allowlist excludes the OpenAlex and Semantic Scholar APIs), and `chapter-drafting` loses its cross-session paragraph-freeze protection. Skills 1, 3 and 6 are essentially unaffected. Full operating manual for the standalone mode (Traditional Chinese): [docs/在-claude-ai-上使用.md](docs/在-claude-ai-上使用.md).
+**Environment.** The full pipeline needs a **persistent workspace folder** — Claude Desktop's **Cowork** mode, or **Claude Code**. But all seven skills also install on **claude.ai in the browser** (Skills are available from the **Free plan** onward; just enable *Code execution and file creation* under Settings → Capabilities). What you get there is not a pipeline but **seven standalone tools**: handoffs between stages are manual file moves, `literature-search`'s automated search is unavailable (the sandbox domain allowlist excludes the OpenAlex and Semantic Scholar APIs), and `chapter-drafting` loses its cross-session paragraph-freeze protection. Skills 1, 3 and 6 are essentially unaffected. Full operating manual for the standalone mode: [docs/en/using-on-claude-ai.md](docs/en/using-on-claude-ai.md).
 
 ## Honest limits
 
@@ -77,4 +77,4 @@ Skills 1–6 and all documents are the author's original work, built and iterate
 
 Lo-Wei Lee (李洛維), Assistant Professor, Taiwan Police College.
 
-**Citation**: Lee, L.-W. (2026). *academic-ai-workflow: An institution-based AI collaboration workflow for academic research* (v1.1.1). https://github.com/LoWeiLee/academic-ai-workflow
+**Citation**: Lee, L.-W. (2026). *academic-ai-workflow: An institution-based AI collaboration workflow for academic research* (v1.1.2). https://github.com/LoWeiLee/academic-ai-workflow

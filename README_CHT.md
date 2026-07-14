@@ -2,7 +2,7 @@
 
 [English](README_EN.md) ｜ **繁體中文**
 
-本專案主要文件為繁體中文。完整的設計原理與架構說明見[工作流架構白皮書](docs/工作流架構白皮書.md)，安裝與操作見[快速上手指南](docs/快速上手指南.md)。只有 claude.ai 網頁版（無 Cowork／Claude Code）的使用者見[在 claude.ai 上使用](docs/在-claude-ai-上使用.md)。
+完整的設計原理與架構說明見[工作流架構白皮書](docs/工作流架構白皮書.md)，安裝與操作見[快速上手指南](docs/快速上手指南.md)。只有 claude.ai 網頁版（無 Cowork／Claude Code）的使用者見[在 claude.ai 上使用](docs/在-claude-ai-上使用.md)。
 
 > 我在做的，是將自己的判斷力與領域知識，整包教給 AI，訓練 AI 成為一個不會累的我。
 >
@@ -77,4 +77,4 @@ skill 1 至 6 與所有文件為作者原創，在參考任何外部套件之前
 
 李洛維（Lo-Wei Lee），臺灣警察專科學校助理教授。
 
-**引用**：Lee, L.-W. (2026). *academic-ai-workflow: An institution-based AI collaboration workflow for academic research* (v1.1.1). https://github.com/LoWeiLee/academic-ai-workflow
+**引用**：Lee, L.-W. (2026). *academic-ai-workflow: An institution-based AI collaboration workflow for academic research* (v1.1.2). https://github.com/LoWeiLee/academic-ai-workflow

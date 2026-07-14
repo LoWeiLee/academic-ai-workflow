@@ -1,5 +1,5 @@
 ---
-citation_key: chen2018pb
+citation_key: chen2018participatory
 type: literature-application
 paper_id: paper-1
 knowledge_note: "參與式預算_Chen2018_PBCivicTrust_知識.md"
@@ -117,4 +117,4 @@ Chen & Lin 建立了「參與經由程序公平感生信任」，但沒有回答
 
 ---
 
-分析完成時間：2026-07-10　　分析者：Claude（literature-analysis v1.1.1 應用檔範本｜公版示範，虛構文獻）
+分析完成時間：2026-07-10　　分析者：Claude（literature-analysis v1.1.2 應用檔範本｜公版示範，虛構文獻）

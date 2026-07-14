@@ -94,7 +94,7 @@
 ---
 
 ## Part E｜下一步操作
-1. VPN 連線（若有需要）
+1. 機構 VPN 連線（校外存取付費全文時才需要；校內網路或開放取用文獻可略過）
 2. Zotero Add by Identifier
 3. 匯出 PDF 至 `01_文獻/{topic}/`（搜尋暫存區，不另設 pdfs 子層）
 4. 將 PDF 比照知識檔晉升流程移入自己慣用的文獻管理 vault（例如 Obsidian 中自訂的文獻資料夾），並於 pending_zotero_transfer.md 勾選「PDF 已晉升至 vault」

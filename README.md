@@ -31,6 +31,8 @@
 >6. 要求 AI 扮演討人厭的挑剔審稿人，對稿件進行審查(skill 6: review-diagnosis)
 >7. 針對訪談逐字稿走 reflexive TA 或 coding reliability 路線，進行質性主題分析(skill 7: thematic-analysis)。
 
+想先看產出長什麼樣：skill 3 附[知識檔範例](skills/3-literature-analysis/references/example-literature-knowledge.md)與[應用檔範例](skills/3-literature-analysis/references/example-literature-application.md)、skill 4 附[綜整範例](skills/4-literature-synthesis/references/example-literature-synthesis-knowledge.md)（皆為虛構文獻示範，格式即實際產出）。
+
 延伸選配：skill 3、4 產出的知識檔與應用檔，可搭配 Obsidian 等雙向連結工具建成跨專案文獻庫，自動呈現「哪些論文引用過同一篇文獻」，作法見[進階：知識庫與 Obsidian 整合](docs/進階_知識庫與Obsidian整合.md)。
 
 你或許會問，為什麼沒有量化分析的 skill 模板？這是來自作者本身的偏誤，量化是我的老本行，我寫得太習慣了，單獨做一支 skill 不符合成本效益。另外就是，我已經做了另一個統計前端工具[多多快跑](https://loweilee.github.io/DuoDuoRun/)，來做為輔助教學工具。
