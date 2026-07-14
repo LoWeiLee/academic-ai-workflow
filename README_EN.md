@@ -77,4 +77,4 @@ Skills 1–6 and all documents are the author's original work, built and iterate
 
 Lo-Wei Lee (李洛維), Assistant Professor, Taiwan Police College.
 
-**Citation**: Lee, L.-W. (2026). *academic-ai-workflow: An institution-based AI collaboration workflow for academic research* (v1.0.0). https://github.com/LoWeiLee/academic-ai-workflow
+**Citation**: Lee, L.-W. (2026). *academic-ai-workflow: An institution-based AI collaboration workflow for academic research* (v1.1.1). https://github.com/LoWeiLee/academic-ai-workflow

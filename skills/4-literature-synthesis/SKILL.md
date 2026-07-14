@@ -3,7 +3,7 @@ name: literature-synthesis
 description: "跨文件主題綜整技能。當使用者已完成多篇文獻的逐篇分析（literature-analysis 產出），要求進行跨文件的主題比較、理論地圖建構、研究缺口識別、或建立對某個理論主題的系統性理解時，必須使用此技能。觸發情境包括：「幫我綜整這批文獻」、「這個主題的文獻告訴我什麼」、「幫我找出研究缺口」、「＜主題A＞這個主題的理論版圖是什麼」、「我的研究在這批文獻中站在哪個位置」。此技能以 literature-analysis 的知識檔核心摘要與應用檔應用摘要為主要輸入，產出一份帶有明確文獻歸屬的理論知識圖譜（雙檔：知識檔＋應用檔），供 chapter-drafting 章節撰寫直接使用。界定：本技能為**跨篇**綜整，前提是該主題各篇已有 literature-analysis 知識檔；文獻尚未逐篇分析時，先用 literature-analysis；把綜整檔落筆成章節正文則屬 chapter-drafting。"
 ---
 
-# 跨文件主題綜整技能 v1.1.0
+# 跨文件主題綜整技能 v1.1.1
 
 > 本檔守決策層與雙檔規格。論證判斷框架下放 `references/reasoning-framework.md`（四支共用副本，第二階段分析按需載入）；兩份範本（example-literature-synthesis-knowledge／-application）同捆於 `references/`，第零階段強制讀取。雙檔架構（綜整知識檔 paper-agnostic 長期累加正本＋綜整應用檔綁定 paper_id）、三模式（Mode A 全新綜整／Mode B 增量更新／Mode C 既有檔批次拆分，依「主題資料夾內有無綜整知識檔」自動切換，不使用索引檔）為現行設計。Mode C 為一次性遷移工具，置於檔末附錄。變更歷程見 repo CHANGELOG，本檔不嵌補丁／遷移公告。
 
@@ -80,6 +80,7 @@ description: "跨文件主題綜整技能。當使用者已完成多篇文獻的
 啟動某主題綜整時，檢查該主題資料夾（`理論基礎/[主題]/`）內有無 `[主題]_綜整知識.md`：
 - **無 → Mode A（全新綜整）**
 - **有 → Mode B（增量更新）**，宣告「本主題已有綜整知識檔，進入增量更新模式」
+- **該主題路徑不存在（vault 尚未建立）→ 視同無知識檔，走 Mode A**，並提示使用者：尚未另建 vault 者，最簡做法是以工作區的 `01_文獻/` 充當 vault（「3_文獻」為 vault 慣例名，路徑中的 `3_文獻` 讀作 `01_文獻` 即可）
 
 **步驟二：讀取研究脈絡**
 - `00_專案控制/about-me.md`、`research-identity.md`、`writing-standards.md`
@@ -321,6 +322,8 @@ tags:
 ---
 
 ## 版本資訊
+
+**v1.1.1｜補「vault 路徑不存在→視同無知識檔走 Mode A」偵測分支與 01_文獻 橋接說明**
 
 **v1.1.0｜新增無工作區模式（claude.ai 等無持久檔案系統的環境）降級分支**
 

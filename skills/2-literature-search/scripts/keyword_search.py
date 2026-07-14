@@ -70,7 +70,7 @@ def brief(w):
     return {
         "title": w.get("title") or w.get("display_name"),
         "year": w.get("publication_year"),
-        "venue": (w.get("primary_location") or {}).get("source", {} ).get("display_name")
+        "venue": ((w.get("primary_location") or {}).get("source") or {}).get("display_name")
                  if w.get("primary_location") else None,
         "doi": (w.get("doi") or "").replace("https://doi.org/", ""),
         "citationCount": w.get("cited_by_count"),

@@ -76,7 +76,7 @@ def _oa_work_brief(w, source, rank_info, query):
         "title": w.get("title") or w.get("display_name"),
         "authors": [a.get("author", {}).get("display_name") for a in w.get("authorships", [])][:10],
         "year": w.get("publication_year"),
-        "venue": (w.get("primary_location") or {}).get("source", {} ).get("display_name")
+        "venue": ((w.get("primary_location") or {}).get("source") or {}).get("display_name")
                  if w.get("primary_location") else None,
         "citationCount": w.get("cited_by_count"),
         "abstract": reconstruct_abstract(w.get("abstract_inverted_index")),

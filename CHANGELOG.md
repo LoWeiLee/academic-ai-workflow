@@ -1,5 +1,28 @@
 # CHANGELOG
 
+## v1.1.1（第二輪紅隊審查修訂，2026-07-14）
+
+依第二輪紅隊審查結果修訂，七支重打包為 `_v1.1.1.skill`。
+
+**修正（阻斷級）**
+- literature-search：修正 `citation_expand.py`／`keyword_search.py` 解析 OpenAlex venue 時，`source` 欄位為 null 即拋 AttributeError 導致整批無謂降級的 bug（實測復現）
+- chapter-drafting：Part 0.1 對 `paper-structure.md` 缺漏新增「簡化結構模式」逃生門——重寫既有草稿或小規模試用時，可由使用者當場提供研究問題、論述目標與字數目標充當臨時結構錨，不再硬性拒絕啟動（description 明列的「這段草稿幫我重寫」觸發情境原本是死路）
+
+**修正（一致性與可攜性）**
+- chapter-drafting：description 與本文對 `folder-instructions.md` 的選配地位對齊（原 description 誤標為強制必讀，會複製 v1.0.1 已修掉的缺檔誤拒）；介面合約「台灣脈絡適用性」欄位名對齊 literature-synthesis 公版「特定研究情境的適用性說明」；必讀清單補 `about-me.md`（3a 列，缺漏不拒絕啟動），使寫作慣性機制讀得到權威來源
+- review-diagnosis：嚴格度層級表補「國際 SSCI」對應列（原 Pre-flight 有此選項但表中無錨點）；TSSCI 分級加「臺灣在地示例，請依所屬體系替換」說明
+- literature-analysis／literature-synthesis：SKILL.md 內補「3_文獻」vault 慣例名與 starter-kit `01_文獻/` 的橋接說明（原僅存於 starter-kit README，單裝 .skill 者看不到）；literature-synthesis 步驟一補「vault 路徑不存在→視同無知識檔走 Mode A」分支；`split_legacy.py` 版本戳與 SKILL 同步（原滯留 v1.0.1）
+- starter-kit：01–05 五份 README 檔名規則統一為含日期版，與 CLAUDE.md 一致（原兩套規則並存）
+
+**文件**
+- README：開頭加導讀標示與「名詞速解／你需要準備什麼」導引框（skill 白話定義、Cowork 方案門檻與官方連結）；架構圖改用中文標籤版；回饋管道補 GitHub Issues 落點；DuoDuoRun 改標準連結
+- README_CHT／README_EN／白皮書：引用格式版本號由 v1.0.0 對齊為 v1.1.1
+- 快速上手指南：A 路徑補 Cowork 取得方式（Pro 起、桌面應用、官方說明連結）；Claude Code 安裝補 skills 目錄具體路徑
+- 在 claude.ai 上使用：「付費版」明確為「付費方案（Pro 起）＋桌面應用」
+
+**打包**
+- 七支重打包為 `_v1.1.1.skill`（research-design-diagnosis、thematic-analysis 本輪無內容變更，僅版本對齊）。舊版 `_v1.1.0.skill` 請於檔案總管手動刪除（版本回溯依靠 git 歷史）
+
 ## v1.1.0（無工作區模式，2026-07-13）
 
 七支 skill 全數改版重打包。本版讓七支工序在**沒有持久工作區資料夾的環境**（claude.ai 網頁版）能自動降級運作，取代 v1.0.2 文件中要求使用者手動貼上的「開場宣告」。

@@ -1,9 +1,9 @@
 ---
 name: chapter-drafting
-description: "章節撰寫協作技能。當使用者準備將 paper-structure.md 與 literature-synthesis 綜整檔落實為期刊章節內文、或對既有章節草稿進行重寫修訂時，必須使用此技能。觸發情境包括：「幫我寫第二章 2.2 節」、「這一節我們開始動筆」、「把綜整檔落筆成章節正文」、「這段草稿幫我重寫」、「從論述邏輯展開為段落」。界定：本技能負責**段落撰寫層**（把已定結構與綜整落筆成正文、重寫修訂）；章節**結構**的增刪調整屬 research-design-diagnosis、找/建文獻池屬 literature-search、跨篇綜整屬 literature-synthesis、審稿/找問題/診斷屬 review-diagnosis。觸發後強制讀取 paper-structure.md 對應章節、目標主題的 literature-synthesis 綜整知識檔與該 paper 的綜整應用檔、writing-standards.md、folder-instructions.md，並以「段落骨架 + 推薦句型 + 引用建議」的中等自由度、配合「寫一段確認一段」的漸進式互動模式協作，嚴格禁止引入未經 literature-analysis / literature-synthesis 審核的新文獻。"
+description: "章節撰寫協作技能。當使用者準備將 paper-structure.md 與 literature-synthesis 綜整檔落實為期刊章節內文、或對既有章節草稿進行重寫修訂時，必須使用此技能。觸發情境包括：「幫我寫第二章 2.2 節」、「這一節我們開始動筆」、「把綜整檔落筆成章節正文」、「這段草稿幫我重寫」、「從論述邏輯展開為段落」。界定：本技能負責**段落撰寫層**（把已定結構與綜整落筆成正文、重寫修訂）；章節**結構**的增刪調整屬 research-design-diagnosis、找/建文獻池屬 literature-search、跨篇綜整屬 literature-synthesis、審稿/找問題/診斷屬 review-diagnosis。觸發後強制讀取 paper-structure.md 對應章節、research-identity.md、writing-standards.md，與目標主題的 literature-synthesis 綜整知識檔及該 paper 的綜整應用檔（folder-instructions.md 為選配，不存在為常態），並以「段落骨架 + 推薦句型 + 引用建議」的中等自由度、配合「寫一段確認一段」的漸進式互動模式協作，嚴格禁止引入未經 literature-analysis / literature-synthesis 審核的新文獻。"
 ---
 
-# 章節撰寫協作（chapter-drafting）v1.1.0
+# 章節撰寫協作（chapter-drafting）v1.1.1
 
 > 本檔守決策層（必讀閘門、五階段流程、自由度邊界、引用紀律、觸發閾值、介面合約）。逐字輸出模板下放 `references/`，於對應時機才載入：
 > - `references/format-templates.md` —— 啟動宣告、段落骨架、填充稿、白名單外警示、機制範本一/二觸發回應、小節署名、Part 7 自檢清單（撰寫循環時載入）
@@ -37,9 +37,10 @@ description: "章節撰寫協作技能。當使用者準備將 paper-structure.m
 
 | 順序 | 檔案 | 用途 | 缺漏處置 |
 |------|------|------|---------|
-| 1 | `00_專案控制/paper-structure.md` | 取得目標章節的論述邏輯、核心任務、字數目標、引用配置 | 回覆「paper-structure.md 必讀，請確認此檔存在」 |
+| 1 | `00_專案控制/paper-structure.md` | 取得目標章節的論述邏輯、核心任務、字數目標、引用配置 | 回覆「paper-structure.md 未找到。從零撰寫請先以 research-design-diagnosis 產出結構檔；若只是重寫既有草稿或小規模試用，可明確選擇『簡化結構模式』：由你當場提供本節的研究問題、論述目標與字數目標，充當本次臨時結構錨」。簡化結構模式僅經使用者明確選擇時生效，啟動宣告須標「簡化結構模式」，且每完成一節即建議補跑 research-design-diagnosis |
 | 2 | `00_專案控制/research-identity.md` | 取得使用者的學術定位、寫作慣性自我申報清單、AI 協作觸發時機 | 回覆「請先確認 research-identity.md 存在於 00_專案控制/」 |
 | 3 | `00_專案控制/writing-standards.md` | 取得禁止清單、學術中文語氣、引用格式、**使用者寫作風格庫**（語感對齊基準，若已建立）、AI 介入機制（依使用者自訂慣性清單） | 回覆「writing-standards.md 必讀，請補齊後重新啟動」 |
+| 3a | `00_專案控制/about-me.md` | 取得寫作慣性自我申報清單的**權威來源**（research-identity.md 內僅留指標）與個人研究脈絡 | 不存在時**不拒絕啟動**：慣性機制改以 research-identity.md 內的申報段為準 |
 | 4 | 對應 Paper 的 `folder-instructions.md`（選配） | 取得該論文的專屬協作原則與**第 I 部分品質閘門**（Part 3.3、4.2 動態讀取） | 該檔不存在＝此專案無專屬品質閘門，僅以 `00_專案控制/` 四份控制檔為準即可（此為常態，不需提示為缺失） |
 | 5 | **目標主題的綜整知識檔＋該 paper 的綜整應用檔（兩份皆必讀）** | 知識檔提供概念節點庫、理論版圖、隱性假設（寫什麼）；應用檔提供缺口定位、5.1 論述邏輯、5.2 引用配置、5.4 概念使用對照（怎麼為這篇鋪） | **缺任一份即拒絕啟動**，回覆「本 Skill 的引用紀律以 literature-synthesis 雙檔（知識＋應用）為基礎，請先透過 literature-synthesis 產出對應主題的綜整，或明確告知改走『無綜整模式』（不建議，會大幅削弱引用準確性）」 |
 
@@ -287,7 +288,7 @@ description: "章節撰寫協作技能。當使用者準備將 paper-structure.m
 
 ### 8.1 上游：literature-synthesis（跨文件綜整，雙檔架構）
 
-**期待 literature-synthesis 的產出滿足**：綜整知識檔「概念節點庫」每節點有標準定義（含原文引句與頁碼）、戰略意圖、理論地位、台灣脈絡適用性；綜整應用檔「5.2 核心文獻的引用配置」明確區分「重點引用／背景引用／對比組／不建議引用」；綜整應用檔「5.1 論述邏輯建議」提供清楚論述步驟、「5.4 概念與共識的章節使用對照」提供各節點的章節落點與建議引用表述。
+**期待 literature-synthesis 的產出滿足**：綜整知識檔「概念節點庫」每節點有標準定義（含原文引句與頁碼）、戰略意圖、理論地位、特定研究情境的適用性說明；綜整應用檔「5.2 核心文獻的引用配置」明確區分「重點引用／背景引用／對比組／不建議引用」；綜整應用檔「5.1 論述邏輯建議」提供清楚論述步驟、「5.4 概念與共識的章節使用對照」提供各節點的章節落點與建議引用表述。
 
 **若產出不足**：chapter-drafting 階段 2 骨架會退化為「Claude 自行推論」，違反引用紀律——此時應主動回報「literature-synthesis 綜整檔在 [面向] 的資訊不足，建議先補強後再進入 chapter-drafting」。
 
@@ -307,7 +308,7 @@ chapter-drafting 產出的章節草稿是 review-diagnosis 自我審稿的對象
 
 ## 版本資訊
 
-**版本**：v1.1.0｜新增無工作區模式（claude.ai 等無持久檔案系統的環境）降級分支。v1.0.1｜紅隊審查修訂
+**版本**：v1.1.1｜paper-structure.md 缺漏新增「簡化結構模式」逃生門；description 與本文對 folder-instructions.md 選配地位對齊；介面合約欄位名對齊 literature-synthesis 公版；必讀清單補 about-me.md（3a，缺漏不拒絕啟動）。v1.1.0｜新增無工作區模式（claude.ai 等無持久檔案系統的環境）降級分支。v1.0.1｜紅隊審查修訂
 **變更歷程**：詳見 repo CHANGELOG
 
 ---

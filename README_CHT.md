@@ -77,4 +77,4 @@ skill 1 至 6 與所有文件為作者原創，在參考任何外部套件之前
 
 李洛維（Lo-Wei Lee），臺灣警察專科學校助理教授。
 
-**引用**：Lee, L.-W. (2026). *academic-ai-workflow: An institution-based AI collaboration workflow for academic research* (v1.0.0). https://github.com/LoWeiLee/academic-ai-workflow
+**引用**：Lee, L.-W. (2026). *academic-ai-workflow: An institution-based AI collaboration workflow for academic research* (v1.1.1). https://github.com/LoWeiLee/academic-ai-workflow

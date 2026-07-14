@@ -24,7 +24,7 @@ import os
 import re
 import sys
 from datetime import date
-SKILL_VERSION = "v1.0.1"  # 與 SKILL.md 版本同步升（禁散落硬編版號）
+SKILL_VERSION = "v1.1.1"  # 與 SKILL.md 版本同步升（禁散落硬編版號）
 
 CORE_FIELDS = ["文獻標識", "核心主張", "理論框架", "研究缺口建構方式", "方法設計"]
 APP_FIELDS = ["對當前研究的直接用途", "警示"]
